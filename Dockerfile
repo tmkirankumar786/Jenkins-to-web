@@ -1,9 +1,7 @@
 FROM nginx:alpine
 
-COPY index.html /var/www/html
+COPY index.html /usr/share/nginx/html/index.html
 
-EXPOSE 7070
-
-RUN sed -i 's/listen 80;/listen 7070;/' /etc/nginx/conf.d/default.conf
+EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
