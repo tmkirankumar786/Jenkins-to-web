@@ -1,6 +1,6 @@
 FROM nginx:alpine
 
-COPY index.html /usr/share/nginx/html/index.html
+COPY web1.html /usr/share/nginx/html/index.html
 
 EXPOSE 3000
 
